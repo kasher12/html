@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 4px;
+        }
+        /* Clearfix (clear floats) */
+        
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        
+        .column:hover .dropdown-content {
+            display: block;
+        }
+        
+        .desc {
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body style="text-align: center;">
+
+    <h2 style="font-size: 40px;color: red">Images Of New Delhi</h2>
+    <br>
+    <br>
+    <hr>
+    <div class="row">
+        <div class="column" style="display: inline-block;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2ucjK3WxTenxMi8f2ZiM4P6Vre_LHHbuO_a0UWo3aNjRN_9j8iQ" alt="Ramoji film city" style="width:100%">
+            <div class="dropdown-content">
+                <p class="desc" style="color: blue;font-size: 25px;font-family: sans-serif;">
+                    The Ramoji Film City in India is located in Hyderabad. Spread over 1666 acres, it is the largest integrated film city in <br> Telangana and has been certified by the Guinness World Records as the largest studio complex in the world.
+                    It was built by<br> Telugu film producer Ramoji Rao in 1996.
+                </p>
+            </div>
+        </div>
+        <div class="column" style="display: inline-block;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT60BgQA_xbSTIQ3zhYIpdQNez_xFgLDfSfpIKQ1u9r52p511sN" alt="Golconda fort" style="width:80%">
+            <div class="dropdown-content">
+                <p class="desc" style="color: blue;font-size: 25px;font-family: sans-serif; ">
+                    The Golkonda fort is listed as an archaeological treasure on the official "List of Monuments" prepared by the Archaeological<br> Survey of India under The Ancient Monuments and Archaeological Sites and Remains Act.[11] Golkonda actually
+                    consists of four<br> distinct forts with a 10 km (6.2 mi) long outer wall with 87 semicircular bastions (some still mounted with cannons), eight<br> gateways, andfour drawbridges, with a number of royal apartments and halls, temples,
+                    mosques, magazines, stables, etc. inside.
+                </p>
+            </div>
+        </div>
+        <div class="column" style="padding:0px">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfzezSm1jj57f9BALR3_rtiOiasoERxgmrWMnCKDV1EppvX1qd1w" alt="Cyber Tower" style="width:100%">
+            <div class="dropdown-content">
+                <p class="desc" style="color: blue;font-size: 25px;font-family: sans-serif;">
+                    Hyderabad Information Technology and Engineering Consultancy City, abbreviated as HITEC City, is an Information<br> Technology, Engineering, Health informatics, and Bioinformatics campus in the suburbs of Hyderabad, Rangareddy<br>                    Dist, India. Located 15km² from the centre of Hyderabad,HITEC City lies within the Cyberabad Development Area, now <br> part of the Hyderabad metropolitan region
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

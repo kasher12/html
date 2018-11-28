@@ -1,0 +1,23 @@
+<html>
+<title>Htmltags in js</title>
+
+<head>
+
+</head>
+
+<body>
+    <div id="parent">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGpEh5qqujlLy3R608-58TLQORJnoWj0va73fKu62z5t0gFD-5ng" width="120" height="120">
+        <p id="p1">HTML AND css</p>
+        <p id="p2">Javascript5</p>
+    </div>
+    <script>
+        var para = document.createElement("p");
+        var node = document.createTextNode("building blocks of web development");
+        para.appendChild(node);
+        var element = document.getElementById("div1");
+        element.appendChild(para);
+    </script>
+</body>
+
+</html>

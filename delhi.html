@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 4px;
+        }
+        /* Clearfix (clear floats) */
+        
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        
+        .column:hover .dropdown-content {
+            display: block;
+        }
+        
+        .desc {
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body style="text-align: center;">
+
+    <h2 style="font-size: 40px;color: red">Images Of New Delhi</h2>
+    <br>
+    <br>
+    <hr>
+    <div class="row">
+        <div class="column" style="display: inline-block;">
+            <img src="https://www.holidify.com/images/cmsuploads/thumbnail/attr_1727.jpg" alt="Qutubminar" style="width:100%">
+            <div class="dropdown-content">
+                <p class="desc" style="color: blue;font-size: 25px;font-family: sans-serif;">
+                    Qutub Minar's first storey around 1192. In 1220, Aibak's successor and son-in-law Shamsuddin Iltutmish completed a further three storeys. In 1369, a lightning strike destroyed the top storey. Firoz Shah Tughlaq replaced the damaged storey, and added one
+                    more. Sher Shah Suri also added an entrance to this tower while he was ruling and Humayun was in exile</p>
+            </div>
+        </div>
+        <div class="column" style="display: inline-block;">
+            <img src="https://www.holidify.com/images/cmsuploads/thumbnail/attr_1718.jpg" alt="India-Gate" style="width:80%">
+            <div class="dropdown-content">
+                <p class="desc" style="color: blue;font-size: 25px;font-family: sans-serif; ">The foundation stone of India Gate was laid by His Royal Highness, the Duke of Connaught in 1921 and it was designed by Edwin Lutyens.<br> The monument was dedicated to the nation 10 years later by the then Viceroy, Lord Irwin. Another
+                    memorial,
+                    <br> Amar Jawan Jyoti was added much later, after India got its independence.</p>
+            </div>
+        </div>
+        <div class="column" style="padding:0px">
+            <img src="https://www.holidify.com/images/compressed/attractions_thumbnails/attr_1874.jpg" alt="RedFort" style="width:100%">
+            <div class="dropdown-content">
+                <p class="desc" style="color: blue;font-size: 25px;font-family: sans-serif;">
+                    Red Fort is a historic fort in the city of Delhi in India. It was the main residence of the emperors of the Mughal dynasty <br>for nearly 200 years, until 1856.[1] It is located in the center of Delhi and <br> houses a number of museums.
+                    In addition to accommodating the emperors and their households, it was <br>the ceremonial and political center of the Mughal state and the setting for events critically impacting the region.
+                </p>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
