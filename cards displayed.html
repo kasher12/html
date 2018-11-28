@@ -1,0 +1,48 @@
+<html>
+
+<body>
+    <div id="data">
+        <form style="text-align: center;color:blueviolet">
+            Product Id: <input id="pid" type="text"> <br> <br> Product Name: <input id="pname" type="text"> <br> <br> Product Price: <input id="pprice" type="text"> <br> <br> Product Image: <input id="pimage" type="text" height="200px" width="200px">            <br> <br>
+            <input id="show" type="button" value="Submit" onclick=display()>
+        </form>
+    </div>
+
+
+</body>
+<script>
+    function display() {
+        event.preventDefault();
+        var pno = document.getElementById("pid");
+        var name = document.getElementById("pname");
+        var price = document.getElementById("pprice");
+        var simage = document.getElementById("pimage");
+
+
+        var paraid = document.createElement("p");
+        var node = document.createTextNode(pno.value);
+        paraid.appendChild(node);
+
+        var paraname = document.createElement("p");
+        var node = document.createTextNode(name.value);
+        paraname.appendChild(node);
+
+        var paraprice = document.createElement("p");
+        var node = document.createTextNode(price.value);
+        paraprice.appendChild(node);
+
+        var image = document.createElement("img");
+        image.setAttribute("src", simage.value);
+        image.setAttribute("height", "200px")
+        image.setAttribute("width", "200px")
+
+
+        var element = document.getElementById("data");
+        element.appendChild(paraid);
+        element.appendChild(paraname);
+        element.appendChild(paraprice);
+        element.appendChild(image);
+    }
+</script>
+
+</html>

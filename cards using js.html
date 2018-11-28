@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <style>
+        .cardStyle {
+            max-width: 255px;
+            border-radius: 10PX;
+            background-color: gray;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    Product Name: <input id="pname" type="text"> <br> <br> Product ID: <input id="id" type="text"> <br> <br> Product price:<input id="pprice" type="text"><br><br> Product Image: <input id="pimage" type="text" height="200px" width="200px"> <br> <br>
+    <input id="show" type="button" value="Submit" onclick=display()>
+
+    <div id="pcard">
+
+    </div>
+</body>
+<script>
+    function display() {
+        event.preventDefault();
+
+        var cardset = document.getElementById("pcard");
+        var name = document.getElementById("pname");
+        var ID = document.getElementById("id");
+        var price = document.getElementById("pprice");
+        var simage = document.getElementById("pimage");
+
+        var productcard = document.createElement("div");
+        productcard.classList.add("cardStyle");
+        productcard.id = "card" + Math.random();
+        cardset.appendChild(productcard);
+
+        var close = document.createElement("button");
+        close.classList.add("close");
+        var node = document.createTextNode("x");
+        close.appendChild(node);
+        productcard.appendChild(close);
+        close.setAttribute("onclick", "test()");
+        close.onclick = function test(e) {
+            document.getElementById(e.target.parentNode.id).remove();
+        }
+
+        var productname = document.createElement("p");
+        var node = document.createTextNode(name.value);
+        productname.appendChild(node);
+        productcard.appendChild(productname);
+
+        var productid = document.createElement("p");
+        var node = document.createTextNode(ID.value);
+        productid.appendChild(node);
+        productcard.appendChild(productid);
+
+        var productprice = document.createElement("p");
+        var node = document.createTextNode(price.value);
+        productprice.appendChild(node);
+        productcard.appendChild(productprice);
+
+        var image = document.createElement("img");
+        image.setAttribute("src", simage.value);
+        image.setAttribute("height", "200px");
+        image.setAttribute("width", "250px");
+        productcard.appendChild(image);
+
+    }
+</script>
+
+</html>
